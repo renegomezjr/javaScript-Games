@@ -1,39 +1,43 @@
-<h1>JavaScript Games</h1>
+<div class="row">
+  <div class="col-md-6">
+    <h1>JavaScript Games</h1>
+  </div>
+</div>
 
-<h3>Kelvin Game</h3>
-<p>The first games uses a prompt and some variables behind the scene.</p>
-<script>
-//this is a constant
-const kelvin = prompt('What is the Kelvin temperature today?');
+<div class="row">
+  <div class="col-md-4">
+    <h3>Kelvin Game</h3>
+      <p>The first games uses a prompt and some variables behind the scene to calculate Fahrenheit temp from Kelvin input.</p>
+      <script>
+      //this is a constant
+      const kelvin = prompt('What is the Kelvin temperature today?');
+      //Celsius is kelvin - 273
+      const celsius = kelvin - 273;
+      //Fahrenheit is Celsius * (9/5) + 32
+      const fahrenheit = Math.floor(celsius * (9/5) + 32);
 
-//Celsius is kelvin - 273
-const celsius = kelvin - 273;
+      //From the calcs above, this is our answer.
+      document.write(`The temperature is ${fahrenheit} degrees fahrenheit.`);
+      </script>
+  </div>
+  <div class="col-md-4">
+    <h3>Dog Years</h3>
+      <p>This game is a calculation of my age in dog years.</p>
+        <script>
+        //My age
+        let myAge = 38;
+        //First two human years
+        let earlyYears = 2;
+        //Multiply the early human years to the dogs years.
+        earlyYears *= 10.5;
+        //First two years accounted for
+        laterYears = myAge - 2;
+        //My age in dog years
+        myAgeInDogYears = (4 * laterYears) + earlyYears;
+        //My name
+        myName = 'Rene'.toLowerCase();
 
-//Fahrenheit is Celsius * (9/5) + 32
-const fahrenheit = Math.floor(celsius * (9/5) + 32);
-
-//From the calcs above, this is our answer.
-document.write(`The temperature is ${fahrenheit} degrees fahrenheit.`);
-</script>
-<h3>Dog Years</h3>
-<script>
-//My age
-let myAge = 38;
-
-//First two human years
-let earlyYears = 2;
-
-//Multiply the early human years to the dogs years.
-earlyYears *= 10.5;
-
-//First two years accounted for
-laterYears = myAge - 2;
-
-//My age in dog years
-myAgeInDogYears = (4 * laterYears) + earlyYears;
-
-//My name
-myName = 'Rene'.toLowerCase();
-
-document.write(`My name is ${myName}. I am ${myAgeInDogYears} years old in dog years.`);
-</script>
+        document.write(`My name is ${myName}. I am ${myAgeInDogYears} years old in dog years.`);
+        </script>
+  </div>
+</div>
