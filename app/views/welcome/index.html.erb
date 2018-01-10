@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>JavaScript Games</title>
-  </head>
-  <body>
-    <h1>Welcome</h1>
-    <p>JavaScript Games</p>
-  </body>
-</html>
+<h1>JavaScript Games</h1>
+
+<h3>Kelvin Game</h3>
+<p>The first games uses a prompt and some variables behind the scene.</p>
+<script>
+//this is a constant
+const kelvin = prompt('What is the Kelvin temperature today?');
+
+//Celsius is kelvin - 273
+const celsius = kelvin - 273;
+
+//Fahrenheit is Celsius * (9/5) + 32
+const fahrenheit = Math.floor(celsius * (9/5) + 32);
+
+//From the calcs above, this is our answer.
+document.write(`The temperature is ${fahrenheit} degrees fahrenheit.`);
+</script>
