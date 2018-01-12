@@ -7,8 +7,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<!-- Add navigation so I can separate out the different types of projects.-->
   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">JavaScript mini-Projects</a>
+        </div>
+      </div>
+    </nav>
     <div class='container'>
     <%= yield %>
     </div>
