@@ -26,3 +26,43 @@ function dogYearsGame(){
 
   document.getElementById('dogYears').innerHTML = `My name is ${myName}. I am ${myAgeInDogYears} years old in dog years.`;
 }
+
+function magicEightBallGame(){
+  let userName = prompt('What is your name?');
+  //userName = prompt('Would you like to tell me your name?');
+  userName ? (document.getElementById('magicEightBall').innerHTML = `Hello, ${userName}!`) : (document.getElementById('magicEightBall').innerHTML = 'Hello!');
+
+  let userQuestion = prompt('What would you like to ask the Magic Eight Ball?');
+  //Random number between 0 and 7
+  let randomNumber = Math.floor(Math.random() * Math.floor(8));
+
+  let eightBall = '';
+
+  switch (randomNumber){
+    case 0 :
+      eightBall = 'It is certain';
+      break;
+    case 1 :
+      eightBall = 'It is decidedly so';
+      break;
+    case 2 :
+      eightBall = 'Reply hazy try again';
+      break;
+    case 3 :
+      eightBall = 'Cannot predict now';
+      break;
+    case 4 :
+      eightBall = 'Don\'t count on it';
+      break;
+    case 5 :
+      eightBall = 'My sources say no';
+      break;
+    case 6 :
+      eightBall = 'Outlook not so good';
+      break;
+    default :
+      eightBall = 'Signs point to yes';
+      break;
+                      }
+  document.getElementById('answer').innerHTML = `Well, ${userName}, you asked, "${userQuestion}".  The Magic Eight Ball answers, "${eightBall}".`;
+}
