@@ -1,3 +1,4 @@
+//Kelvin Game
 function kelvinGame(){
   //this is a constant
   const kelvin = prompt('What is the Kelvin temperature today?');
@@ -9,7 +10,7 @@ function kelvinGame(){
   //From the calcs above, this is our answer.
   document.getElementById('kelvin').innerHTML = `The temperature is ${fahrenheit} degrees fahrenheit.`;
 }
-
+//Dog Years
 function dogYearsGame(){
   //My age
   let myAge = 38;
@@ -26,7 +27,7 @@ function dogYearsGame(){
 
   document.getElementById('dogYears').innerHTML = `My name is ${myName}. I am ${myAgeInDogYears} years old in dog years.`;
 }
-
+//Magic Eight Ball
 function magicEightBallGame(){
   let userName = prompt('What is your name?');
   //userName = prompt('Would you like to tell me your name?');
@@ -65,4 +66,67 @@ function magicEightBallGame(){
       break;
                       }
   document.getElementById('answer').innerHTML = `Well, ${userName}, you asked, "${userQuestion}".  The Magic Eight Ball answers, "${eightBall}".`;
+}
+//Rock, Paper, Scissors
+const getUserChoiceRPS = (userInput) => {
+  if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb'){
+  	return userInput = userInput.toLowerCase();
+  } else {
+    console.log('You did not enter a valid choice!');
+  }
+};
+
+function getComputerChoiceRPS (){
+  let compChoice = Math.floor(Math.random() * Math.floor(3));
+  //console.log(compChoice);
+
+  if(compChoice === 0) {
+    return 'rock';
+  } else if (compChoice === 1) {
+    return 'scissors';
+  } else {
+    return 'paper';
+  }
+}
+
+function determineWinnerRPS(userChoice, computerChoice){
+  //tie condition
+  if(userChoice === computerChoice){
+    return 'It was a tie!';
+  } else if (userChoice === 'bomb'){
+    return 'Cheat code engaged: The Human wins!';
+  }
+  //userChoice 'rock'
+  if(userChoice === 'rock'){
+    if(computerChoice === 'paper'){
+      return 'Haha, computers are better than people! Puter wins!';
+    } else {
+      return 'Whoa, you won!';
+    }
+  }
+  //userChoice 'paper'
+  if(userChoice === 'paper'){
+    if(computerChoice === 'scissors'){
+      return 'Haha, computers are better than people! Puter wins!';
+    } else {
+      return 'Whoa, you won!';
+    }
+  }
+  //userChoice 'scissors'
+  if(userChoice === 'scissors'){
+    if(computerChoice === 'rock'){
+      return 'Haha, computers are better than people! Puter wins!';
+    } else {
+      return 'Whoa, you won!';
+    }
+  }
+}
+
+function playRPSGame(){
+  let userChoice = getUserChoiceRPS(document.getElementById('userChoice').value);
+  let computerChoice = getComputerChoiceRPS();
+
+  document.getElementById('choicesMade').innerHTML = `You chose ${userChoice} and the computer chose ${computerChoice}.`;
+
+  document.getElementById('rpsResults').innerHTML = determineWinnerRPS(userChoice, computerChoice);
 }
