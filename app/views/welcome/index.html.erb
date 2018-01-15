@@ -55,17 +55,35 @@
       </div>
     </div>
   </div>
+
   <div class="col-md-4">
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h3>Rock, Paper, Scissors</h3>
           <p>Simple rock, paper, scissors to practice JavaScript method calls.</p>
-          <p>User's Choice: <input id="userChoice"></input></p>
+          <form>
+            <div class="form-group">
+              <label for="userChoice">User's Choice:</label>
+              <input type="text" class="form-control" onfocus="this.value=''"id="userChoice"></input>
+            </div>
+          </form>
           <br>
           <h4 id="choicesMade"></h4>
           <h4 id="rpsResults"></h4>
           <br>
           <button type="button" onClick="playRPSGame()" class="btn btn-primary">Activate</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h3>Sleep Debt</h3>
+          <p>Practicing the various formats of method calls.</p>
+          <h4 id="sleepDebtResults"></h4>
+          <br>
+          <button type="button" onClick="calculateSleepDebt()" class="btn btn-primary">Activate</button>
       </div>
     </div>
   </div>

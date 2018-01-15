@@ -72,7 +72,7 @@ const getUserChoiceRPS = (userInput) => {
   if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb'){
   	return userInput = userInput.toLowerCase();
   } else {
-    console.log('You did not enter a valid choice!');
+    return 0;
   }
 };
 
@@ -125,6 +125,9 @@ function determineWinnerRPS(userChoice, computerChoice){
 function playRPSGame(){
   let userChoice = getUserChoiceRPS(document.getElementById('userChoice').value);
   let computerChoice = getComputerChoiceRPS();
+  if(userChoice === 0){
+    return document.getElementById('choicesMade').innerHTML = 'That is not a real choice!'
+  }
 
   document.getElementById('choicesMade').innerHTML = `You chose ${userChoice} and the computer chose ${computerChoice}.`;
 
