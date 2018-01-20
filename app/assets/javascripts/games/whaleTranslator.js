@@ -1,5 +1,5 @@
 function whaleTranslator(){
-let inputMain = 'A Turpentine and turtles';
+let inputMain = document.getElementById('humanSpeak').value;
 let input = inputMain.toLowerCase();
 let vowels = ['a', 'e', 'i', 'o', 'u'];
 let resultArray = [];

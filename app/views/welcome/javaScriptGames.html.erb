@@ -5,7 +5,24 @@
 </div>
 
 <div class="row">
-
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h3>Whale Speak</h3>
+          <p>This game is a whale translator. It really works...seriously!</p>
+          <form>
+            <div class="form-group">
+              <label for="humanSpeak">Human Speak:</label>
+              <input type="text" class="form-control" onfocus="this.value=''" id="humanSpeak"></input>
+            </div>
+          </form>
+          <small>Sing this melodiously under water:</small>
+          <h4 id="whaleSpeak"></h4>
+          <br>
+          <button type="button" onClick="whaleTranslator()" class="btn btn-primary">Activate</button>
+      </div>
+    </div>
+  </div>
 
   <div class="col-md-4">
     <div class="card" style="width: 18rem;">
