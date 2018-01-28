@@ -61,14 +61,16 @@ let menu = {
     return `You will have ${appetizers.name} as an appetizer, ${mains.name} as your main meal, and ${desserts.name} as your dessert.  The meal will cost $${appetizers.price + mains.price + desserts.price}.`
   }
 };
-menu.addDishToCourse('appetizers', 'shrimp', 7);
-menu.addDishToCourse('appetizers', 'moz sticks', 8);
-menu.addDishToCourse('appetizers', 'crab cakes', 9);
-menu.addDishToCourse('mains', 'steak and rice', 12);
-menu.addDishToCourse('mains', 'lobster', 19);
-menu.addDishToCourse('mains', 'clam chowder', 10);
-menu.addDishToCourse('desserts', 'ice cream', 5);
-menu.addDishToCourse('desserts', 'cookies', 3);
-menu.addDishToCourse('desserts', 'pudding', 4);
-let meal = menu.generateRandomMeal();
-console.log(meal);
+function activateRandomMealMaker(){
+  menu.addDishToCourse('appetizers', 'shrimp', 7);
+  menu.addDishToCourse('appetizers', 'moz sticks', 8);
+  menu.addDishToCourse('appetizers', 'crab cakes', 9);
+  menu.addDishToCourse('mains', 'steak and rice', 12);
+  menu.addDishToCourse('mains', 'lobster', 19);
+  menu.addDishToCourse('mains', 'clam chowder', 10);
+  menu.addDishToCourse('desserts', 'ice cream', 5);
+  menu.addDishToCourse('desserts', 'cookies', 3);
+  menu.addDishToCourse('desserts', 'pudding', 4);
+  let meal = menu.generateRandomMeal();
+  document.getElementById('mealMakerResults').innerHTML = meal;
+}
