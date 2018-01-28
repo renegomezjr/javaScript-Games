@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**JS mini-Projects**
 
-Things you may want to cover:
+This project is made of small projects to perfect the fundamentals of JavaScript! I housed everything in a simple Ruby on Rails app just for fun.  Everything in this project was built by Rene Gomez.
 
-* Ruby version
+* Ruby 2.4.3
 
-* System dependencies
+* Rails 5
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* JavaScript
